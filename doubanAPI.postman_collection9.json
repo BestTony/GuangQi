@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "47afdd4e-efdd-49c6-bf5e-2bb1a03a6f96",
+		"name": "doubanAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "searchbook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.apiopen.top/createUserKey?appId=com.chat.peakchao&passwd=123456",
+					"protocol": "https",
+					"host": [
+						"www",
+						"apiopen",
+						"top"
+					],
+					"path": [
+						"createUserKey"
+					],
+					"query": [
+						{
+							"key": "appId",
+							"value": "com.chat.peakchao"
+						},
+						{
+							"key": "passwd",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newman",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a1e14f5-81aa-48f5-8b9e-89858b2668a2",
+						"type": "text/javascript",
+						"exec": [
+							"if(responseCode.code===200){",
+							"    tests[\"responseCode==200\"] = true; ",
+							"}"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"province\":\"广东\",\r\n    \"city\":\"深圳\",\r\n\t\"district\":\"南山区\"\r\n}"
+				},
+				"url": {
+					"raw": "https://www.tencent-iov.com/v1/iov/life/weather/current_weather?appid=login&vin=pin&userId=123&userSig=asdfsdfsafds&timestamp=123",
+					"protocol": "https",
+					"host": [
+						"www",
+						"tencent-iov",
+						"com"
+					],
+					"path": [
+						"v1",
+						"iov",
+						"life",
+						"weather",
+						"current_weather"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "login"
+						},
+						{
+							"key": "vin",
+							"value": "pin"
+						},
+						{
+							"key": "userId",
+							"value": "123"
+						},
+						{
+							"key": "userSig",
+							"value": "asdfsdfsafds"
+						},
+						{
+							"key": "timestamp",
+							"value": "123"
+						},
+						{
+							"key": null,
+							"value": null
+						}
+					]
+				},
+				"description": "fdao"
+			},
+			"response": []
+		}
+	]
+}
